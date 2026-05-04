@@ -14,6 +14,25 @@ public class Bee extends Actor
      */
     public void act()
     {
-        move (1);
+        if(Greenfoot.isKeyDown("left"))
+        {
+            move(-1);
+        }
+        else if(Greenfoot.isKeyDown("right"))
+        {
+            move(1);
+        }
+        eat();
+    }
+    //eats apple and spawns new apple when apple is eaten
+    public void eat()
+    {
+        if(isTouching(Orange.class))
+        {
+            removeTouching(Orange.class);  
+            MyWorld world = (MyWorld) getWorld();
+            world.createOrange();
+            world.increaseScore();
+        }
     }
 }
