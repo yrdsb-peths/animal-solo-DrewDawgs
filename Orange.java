@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Orange extends Actor
 {
+    int speed = 1;
     public Orange()
     {
         GreenfootImage image = getImage();
@@ -20,7 +21,7 @@ public class Orange extends Actor
      */
     public void act()
     {
-        setLocation (getX(), getY() +1);
+        setLocation (getX(), getY() +speed);
         
         MyWorld world = (MyWorld) getWorld();
         if(getY() >= world.getHeight())
@@ -28,6 +29,10 @@ public class Orange extends Actor
             world.gameOver();
             world.removeObject(this);
         }
+    }
+    public void setSpeed(int spd)
+    {
+        speed = spd;
     }
     
 }
