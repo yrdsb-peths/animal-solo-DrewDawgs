@@ -110,5 +110,14 @@ public class TitleScreen extends World
         removeObject(orange2);
         removeObject(orange);
         bee.setLocation(290,201);
+        label2.setLocation(272,347);
+        label2.setLocation(364,350);
+        label2.setLocation(330,346);
+        label2.setLocation(323,346);
+        label.setLocation(326,288);
+        label.setLocation(316,303);
+        label2.setLocation(436,347);
+        label2.setLocation(370,349);
+        label2.setLocation(330,349);
     }
 }
