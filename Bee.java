@@ -57,12 +57,12 @@ public class Bee extends Actor
     {
         if(Greenfoot.isKeyDown("left"))
         {
-            move(-2);
+            move(-1);
             facing = "left";
         }
         else if(Greenfoot.isKeyDown("right"))
         {
-            move(2);
+            move(1);
             facing = "right";
         }
         eat();
